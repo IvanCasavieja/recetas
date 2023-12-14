@@ -8,11 +8,242 @@
     <meta name="description" content="Pagina de recetas">
     <meta name="keywords" content="recetas, cocktails, bebidas, ingredientes">
     <title>Recetas</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/nav.css">
 </head>
 
 <body>
+    <header>
+        <nav id="mainNavigation">
+            <div class="navbar-expand-md">
+                <div class="navbar-dark text-center my-2">
+                    <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+                    </button>
+                </div>
+                <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Book Hotel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Policy</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Company
+                            </a>
+                            <ul class="dropdown-menu ulMostrado" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div>
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="paisajes">Paisajes</button>
+            <button class="filter-btn" data-category="animales">Animales</button>
+            <button class="filter-btn" data-category="comida">Comida</button>
+        </div>
+
+        <div id="gallery">
+            <div class="tarjetas" data-category="paisajes">
+                <img src="ims/istockphoto-694189032-612x612.jpg" data-category="paisajes" alt="imagen 1">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="animales">
+                <img src="ims/ingredientes-comida-de-mar-parrilla.jpg" data-category="animales" alt="imagen 2">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="comida">
+                <img src="ims/istockphoto-694189032-612x612.jpg" data-category="paisajes" alt="imagen 3">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="paisajes">
+                <img src="ims/ingredientes-comida-de-mar-parrilla.jpg" data-category="animales" alt="imagen 4">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="paisajes">
+                <img src="ims/istockphoto-694189032-612x612.jpg" data-category="comida" alt="imagen 5">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="comida">
+                <img src="ims/istockphoto-694189032-612x612.jpg" data-category="comida" alt="imagen 6">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+            <div class="tarjetas" data-category="comida">
+                <img src="ims/istockphoto-694189032-612x612.jpg" data-category="comida" alt="imagen 7">
+                <h1>Receta X</h1>
+                <div class="contenedorDesripcion">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container contenedorEnvioRecetas">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center header">Contact us</legend>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="fname" name="name" type="text" placeholder="First Name"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="lname" name="name" type="text" placeholder="Last Name"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="email" name="email" type="text" placeholder="Email Address"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="phone" name="phone" type="text" placeholder="Phone"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i
+                                            class="fa fa-pencil-square-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Enter your massage for us here. We will get back to you within 2 business days."
+                                            rows="7"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="first">
+                        <h4>Acerca de Nosotros</h4>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quae ex! Magni, totam error
+                            dolore quos, neque aut perferendis nisi ea perspiciatis modi odit at sequi, nesciunt nostrum
+                            asperiores blanditiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Perspiciatis voluptas rem, nulla corporis voluptatem praesentium iusto, nisi neque hic quas
+                            eligendi amet, aut tempore fugiat? Earum fuga temporibus aperiam unde? Lorem ipsum dolor sit
+                            amet consectetur adipisicing </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="second">
+                        <h4> Redes</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="third">
+                        <h4> Contacto</h4>
+                        <div class="contenedorFormulario">
+                            <div class="contededorFormularioCentrado">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <h1></h1>
+    <script src="js/jquery-3.3.1.min.js"></script>
 </body>
 
 </html>
